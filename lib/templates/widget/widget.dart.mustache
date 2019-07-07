@@ -1,0 +1,13 @@
+import 'package:cage/cage.dart';
+
+import '{{ fileName }}_meta.dart';
+import '{{ fileName }}_presenter.dart';
+import '{{ fileName }}_view.dart';
+
+export '{{ fileName }}_meta.dart' show {{ widgetName }}Options;
+
+final WidgetContainerFactory {{ widgetObjectName }} = WidgetContainerFactory(
+    createPresenter: (final Injector injector) => {{ widgetName }}Presenter(),
+    createView: () => {{ widgetName }}View(),
+    widgetKey: {{ widgetName }}Key
+);

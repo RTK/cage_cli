@@ -1,0 +1,14 @@
+import 'package:flutter/widgets.dart' show Key;
+import 'package:meta/meta.dart';
+
+@immutable
+class {{ widgetName }}Options {
+    const {{ widgetName }}Options();
+}
+
+
+abstract class {{ widgetName }}Interface {
+    {{ widgetName }}Options options;
+}
+
+const Key {{ widgetName }}Key = Key('{{ widgetName }}');

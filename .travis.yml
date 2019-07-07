@@ -1,0 +1,10 @@
+language: dart
+dart:
+  - stable
+script:
+  - pub run test_coverage
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+notifications:
+  email:
+    - mail@rouvenkruse.de

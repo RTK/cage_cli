@@ -1,0 +1,24 @@
+name: cage_cli
+description: Command line interface for cage framework. The cli can be used to generate boilerplate source filed like services and widgets.
+version: 0.1.0
+author: Rouven T. Kruse <mail@rouvenkruse.de>
+homepage: https://github.com/RTK/cage_cli
+
+environment:
+  sdk: '>=2.2.0 <3.0.0'
+
+executables:
+  cage:
+
+dependencies:
+  args: ^1.5.1
+  dart_style: ^1.2.4
+  logging: ^0.11.3+2
+  mustache: ^1.1.1
+  path: ^1.6.2
+  resource: ^2.1.5
+  test_coverage: ^0.2.3
+  yaml: ^2.1.15
+
+dev_dependencies:
+  test: ^1.5.3
