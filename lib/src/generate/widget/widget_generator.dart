@@ -2,7 +2,7 @@
 //  Use of this source code is governed by an MIT-style license that can be
 //  found in the LICENSE file.
 
-import 'package:path/path.dart' as Path;
+import 'package:path/path.dart' as path;
 
 import 'package:cage_cli/src/generator.dart';
 
@@ -26,7 +26,7 @@ class WidgetGenerator extends CageSourceGenerator {
 
   @override
   Future<void> generate() {
-    destinationPath = Path.join(destinationPath, baseName);
+    destinationPath = path.join(destinationPath, baseName);
 
     _TemplateInfo.forEach(
         (final _TemplateTypes type, final List<String> tplInfo) async {
@@ -41,7 +41,7 @@ class WidgetGenerator extends CageSourceGenerator {
         'widgetObjectName': className[0].toLowerCase() + className.substring(1)
       });
 
-      final String destinationFile = Path.join(destinationPath, fileName);
+      final String destinationFile = path.join(destinationPath, fileName);
 
       await writeFile(
           destinationFile, formatDartCode(tplOutput, destinationFile));
