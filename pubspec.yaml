@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.4.0 <3.0.0'
 
 executables:
-  cage:
+  cage_cli:
 
 dependencies:
   args: ^1.5.2
