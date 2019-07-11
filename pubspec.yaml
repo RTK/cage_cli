@@ -8,12 +8,13 @@ environment:
   sdk: '>=2.4.0 <3.0.0'
 
 executables:
-  cage:
+  cage_cli:
 
 dependencies:
   args: ^1.5.2
   dart_style: ^1.2.9
   logging: ^0.11.3+2
+  meta: ^1.1.7
   mustache: ^1.1.1
   path: ^1.6.2
   resource: ^2.1.6
