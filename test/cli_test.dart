@@ -39,7 +39,7 @@ void main() {
     test('It should print the correct version', () {
       runner.run(['version']);
 
-      expect(logOutput, 'v0.0.7');
+      expect(logOutput, 'v0.1.0');
     });
   });
 }
