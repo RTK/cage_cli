@@ -2,7 +2,7 @@ language: dart
 dart:
   - stable
 script:
-  - pub run test_coverage --badge=false
+  - pub run test_coverage --no-badge
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
