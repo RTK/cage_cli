@@ -2,7 +2,7 @@
 // Use of this source code is governed by an MIT-style license that can be
 // found in the LICENSE file.
 
-import 'package:path/path.dart' as Path;
+import 'package:path/path.dart' as path;
 
 import 'package:cage_cli/src/generator.dart';
 
@@ -13,7 +13,7 @@ class ServiceGenerator extends CageSourceGenerator {
       : super(path, fileNameAppendix: '_service', removePathExtensions: true);
 
   Future<void> generate() async {
-    final String destinationFile = Path.join(destinationPath, fileName);
+    final String destinationFile = path.join(destinationPath, fileName);
 
     final String tplOutput =
         await createTemplate(_TemplatePath, fileName, {'name': className});

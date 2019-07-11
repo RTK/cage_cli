@@ -6,8 +6,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dart_style/dart_style.dart';
-import 'package:mustache/mustache.dart' as Mustache;
-import 'package:path/path.dart' as Path;
+import 'package:mustache/mustache.dart' as mustache;
+import 'package:path/path.dart' as path;
 import 'package:resource/resource.dart';
 
 import 'logger.dart';
@@ -18,9 +18,9 @@ abstract class CageSourceGenerator {
 
   final String classAppendix;
 
-  final String fileNameAppendix;
+  final String directory;
 
-  final String path;
+  final String fileNameAppendix;
 
   final bool removePathExtensions;
 
@@ -36,17 +36,18 @@ abstract class CageSourceGenerator {
 
   Logger _logger;
 
-  CageSourceGenerator(this.path,
+  CageSourceGenerator(this.directory,
       {this.classAppendix = '',
       this.fileNameAppendix = '',
       this.removePathExtensions = false}) {
     _logger = createLogger('Generator');
 
-    dirName = Path.dirname(path).replaceAll(RegExp('\/'), Path.separator);
+    dirName = path.dirname(directory).replaceAll(RegExp('\/'), path.separator);
 
-    destinationPath = Path.join('lib', 'src', dirName != '.' ? dirName : '');
+    destinationPath = path.join('lib', 'src', dirName != '.' ? dirName : '');
 
-    baseName = Path.basename(path).toLowerCase().replaceAll(RegExp('-'), '_');
+    baseName =
+        path.basename(directory).toLowerCase().replaceAll(RegExp('-'), '_');
 
     fileName = baseName;
 
@@ -74,8 +75,8 @@ abstract class CageSourceGenerator {
     final Resource resource = Resource('package:cage_cli/$path');
     final String resourceString = await resource.readAsString(encoding: utf8);
 
-    final Mustache.Template template =
-        Mustache.Template(resourceString, name: fileName);
+    final mustache.Template template =
+        mustache.Template(resourceString, name: fileName);
 
     return template.renderString(replacements);
   }

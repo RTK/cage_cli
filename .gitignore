@@ -16,4 +16,6 @@ pubspec.lock
 doc/api/
 
 # Coverage
+coverage_badge.svg
 coverage/
+test/.test_coverage.dart

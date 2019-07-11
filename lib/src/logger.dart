@@ -9,7 +9,7 @@ import 'package:meta/meta.dart';
 
 export 'package:logging/logging.dart' show Level, Logger;
 
-typedef _LogFn = void Function(final Object object);
+typedef _LogFn = void Function(Object object);
 
 @visibleForTesting
 _LogFn logFn = print;
