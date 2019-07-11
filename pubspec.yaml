@@ -5,20 +5,20 @@ author: Rouven T. Kruse <mail@rouvenkruse.de>
 homepage: https://github.com/RTK/cage_cli
 
 environment:
-  sdk: '>=2.2.0 <3.0.0'
+  sdk: '>=2.4.0 <3.0.0'
 
 executables:
   cage:
 
 dependencies:
-  args: ^1.5.1
-  dart_style: ^1.2.4
+  args: ^1.5.2
+  dart_style: ^1.2.9
   logging: ^0.11.3+2
   mustache: ^1.1.1
   path: ^1.6.2
-  resource: ^2.1.5
-  test_coverage: ^0.2.3
-  yaml: ^2.1.15
+  resource: ^2.1.6
+  test_coverage: ^0.3.0+1
+  yaml: ^2.1.16
 
 dev_dependencies:
-  test: ^1.5.3
+  test: ^1.6.5
