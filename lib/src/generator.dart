@@ -89,7 +89,7 @@ abstract class CageSourceGenerator {
     } catch (e) {
       _logger.warning('Error formatting dart code in file $fileName');
 
-      throw e;
+      rethrow;
     }
   }
 
